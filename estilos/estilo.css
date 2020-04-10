@@ -1,6 +1,15 @@
-body {
+.body_index {
     background-image: url("../recursos/imagenes/index_fondo.jpg");
     background-color: #52c3f6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.body_loguin {
+    background-image: url("../recursos/imagenes/login_fondo.jpg");
+    background-color: #363535;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: none;
