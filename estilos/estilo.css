@@ -1,1 +1,11 @@
-.main {}
+body {
+    background-image: url("../recursos/imagenes/index_fondo.jpg");
+    background-color: #52c3f6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+}
+
+p {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
