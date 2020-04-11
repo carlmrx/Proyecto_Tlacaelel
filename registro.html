@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div style="margin-top: 3%;margin-bottom: 5%;">
+                <div style="margin-top: 3%;" class="mb-5 mb-lg-0">
                     <div class="jumbotron" style="background-color:#ffffff7d;">
                         <div class="row">
                             <div class="col-md-6 " style="border-right: 1px solid white;">
@@ -35,38 +35,38 @@
                                 <form>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputEmail4">Correo</label>
-                                            <input type="email" class="form-control" id="inputEmail4">
+                                            <label>Correo</label>
+                                            <input type="email" class="form-control" id="correo" name="correo" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Usuario</label>
-                                            <input type="password" class="form-control" id="inputPassword4">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail4">Nombre</label>
-                                            <input type="email" class="form-control" id="inputEmail4">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Apellidos</label>
-                                            <input type="password" class="form-control" id="inputPassword4">
+                                            <label>Usuario</label>
+                                            <input type="text" class="form-control" id="usuario" name="usuario" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputEmail4">Contraseña</label>
-                                            <input type="email" class="form-control" id="inputEmail4">
+                                            <label>Nombre</label>
+                                            <input type="text" class="form-control" id="nombre" name="nombre" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Confirmacion</label>
-                                            <input type="password" class="form-control" id="inputPassword4">
+                                            <label>Apellidos</label>
+                                            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Contraseña</label>
+                                            <input type="password" class="form-control" id="contraseña1" name="contraseña2" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Confirmacion</label>
+                                            <input type="password" class="form-control" id="contraseña2" name="contraseña2" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
-                                            <label for="inputCity">Codigo</label>
-                                            <input type="text" class="form-control" id="inputCity" placeholder="codigo especia (opcional)">
+                                            <label>Codigo</label>
+                                            <input type="text" class="form-control" id="codigo" placeholder="codigo especia (opcional)" name="codigo">
                                         </div>
 
                                     </div>
@@ -78,7 +78,7 @@
                                         </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-outline-danger">Registrar</button>
+                                    <button type="submit" class="btn btn-outline-danger" id="boton" name="boton">Registrar</button>
                                 </form>
                             </div>
                             <div class="col-md-6 d-none d-sm-block ">
