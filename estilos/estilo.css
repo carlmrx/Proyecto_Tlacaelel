@@ -1,6 +1,6 @@
 .body_index {
     background-image: url("../recursos/imagenes/index_fondo.jpg");
-    background-color: #52c3f6;
+    background-color: #43bbf5;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: none;
@@ -18,6 +18,15 @@
 
 .body_registro {
     background-image: url("../recursos/imagenes/registro_fondo.jpg");
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.body_exito {
+    background-image: url("../recursos/imagenes/exito_fondo.jpg");
     background-color: #363535;
     background-repeat: no-repeat;
     background-size: cover;
