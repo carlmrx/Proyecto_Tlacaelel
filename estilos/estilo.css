@@ -8,7 +8,16 @@
 }
 
 .body_loguin {
-    background-image: url("../recursos/imagenes/login_fondo.jpg");
+    background-image: url("../recursos/imagenes/inicio_fondo.jpg");
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.body_registro {
+    background-image: url("../recursos/imagenes/registro_fondo.jpg");
     background-color: #363535;
     background-repeat: no-repeat;
     background-size: cover;
