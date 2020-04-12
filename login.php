@@ -45,12 +45,12 @@
                                 <form>
                                     <div class="form-group">
                                         <label  style="font-size: x-large;">Correo o Usuario</label>
-                                        <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" name="correo" required>
+                                        <input type="text" class="form-control" id="correo" aria-describedby="emailHelp" name="correo" required>
                                         <small id="emailHelp" class="form-text text-muted" style="color: snow!important;">Escribe tu correo o usuario</small>
                                     </div>
                                     <div class="form-group">
                                         <label style="font-size: x-large;">Contraseña</label>
-                                        <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+                                        <input type="password" class="form-control" id="contraseña" name="contraseña" required >
                                     </div>
                                     <a href="#" style="color: orange;">ohh! olvidaste tu contraseña.</a>
                                     <button type="submit" class="btn btn-outline-light" style="margin-top: 5% ;float: right;" id="entrarSistema" name="entrarSistema">Iniciar</button>
@@ -63,14 +63,39 @@
             </div>
         </div>
     </div>
-    </div>
+   
 </body>
 <div class="fixed-bottom">
     <div class="text-center py-2" style="background-color: #fffafa69;">© 2020 Copyright:Carlos Serrano, Pamela Gutierrez
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </html>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#entrarSistema').click(function(){
+        if($('#correo').val()==""){
+            alertify.alert("Por favor ingresa el correo ");
+            return false;
+        }else if($('#contraseña').val()=="" ){
+            alertify.alert("Ingresa la contraseña");
+            return false;
+        }
+        cadena="correo=" + $('#correo').val() +
+                "&contraseña=" + $('#contraseña').val();
+              
+                $.ajax({
+						type:"POST",
+						url:"php/login.php",
+						data:cadena,
+						success:function(r){
+							if(r==1){
+								window.location="exito.php";
+							}else{
+								alertify.alert("Fallo al entrar");
+							}
+						}
+					});
+    });
+});
+</script>

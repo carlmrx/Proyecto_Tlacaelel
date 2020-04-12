@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-md-6 " style="border-right: 1px solid white;">
                                 <h2 class="animated bounceInLeft slow-3s ">Crea tu cuenta!</h2>
-                                <form>
+                                <form id="frmRegistro">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label>Correo</label>
@@ -79,7 +79,7 @@
                                         </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-outline-danger" id="boton" name="boton">Registrar</button>
+                                    <button type="submit" class="btn btn-outline-danger" id="botonRegistro" name="botonRegistro">Registrar</button>
                                 </form>
                             </div>
                             <div class="col-md-6 d-none d-sm-block ">
@@ -97,8 +97,49 @@
     <div class="text-center py-2 " style="background-color: #fffafa69; ">© 2020 Copyright:Carlos Serrano, Pamela Gutierrez
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-
 </html>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#botonRegistro').click(function(){
+        if($('#correo').val()==""){
+            alertify.alert("Falta el correo");
+            return false;
+        }else if($('#usuario').val()==""){
+            alertify.alert("Falta el usuario");
+            return false;
+        }else if($('#nombre').val()==""){
+            alertify.alert("Falta el nombre");
+            return false;
+        }else if($('#apellidos').val()==""){
+            alertify.alert("Faltan los apellidos");
+            return false;
+        }else if($('#contraseña1').val()==""){
+            alertify.alert("Falta la contraseña");
+            return false;
+        }
+        cadena="correo=" + $('#correo').val() +
+            "&usuario=" + $('#usuario').val() +
+            "&nombre=" + $('#nombre').val() +
+            "&apellidos=" + $('#apellidos').val() +
+            "&contraseña=" + $('#contraseña1').val() +
+            "&codigo=" + $('#codigo').val();
+
+            $.ajax({
+                type:"POST",
+                url:"php/registro_usuario.php",
+                data:cadena,
+                success:function(r){
+                    if(r==2){
+                        alertify.alert("Usuario o correo ya registrado");
+                    }
+                   else if(r==1){
+                        $('#frmRegistro')[0].reset();
+                        window.location="exito.php";
+                    }else{
+                        alertify.error("fallo al agregar");
+                    }
+                }
+            });
+    });
+});
+</script>
