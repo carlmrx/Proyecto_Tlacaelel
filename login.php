@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesion</title>
-    <?php require_once "scripts.php" ?>
+    <?php require_once "scripts.php"; ?>
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" style="font-size:x-large;" href="index.html"><b>Bunt</b></a>

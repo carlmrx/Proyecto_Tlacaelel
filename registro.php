@@ -28,59 +28,52 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div style="margin-top: 3%;" class="mb-5 mb-lg-4">
+                <div style="margin-top: 2%;" class="mb-5 mb-md-5"  >
                     <div class="jumbotron" style="background-color:#ffffff7d;">
                         <div class="row">
                             <div class="col-md-6 " style="border-right: 1px solid white;">
-                                <h2 class="animated bounceInLeft slow-3s ">Crea tu cuenta!</h2>
-                                <form id="frmRegistro">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label>Correo</label>
-                                            <input type="email" class="form-control" id="correo" name="correo" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Usuario</label>
-                                            <input type="text" class="form-control" id="usuario" name="usuario" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label>Nombre</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Apellidos</label>
-                                            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label>Contraseña</label>
-                                            <input type="password" class="form-control" id="contraseña1" name="contraseña2" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Confirmacion</label>
-                                            <input type="password" class="form-control" id="contraseña2" name="contraseña2" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                            <label>Codigo</label>
-                                            <input type="text" class="form-control" id="codigo" placeholder="codigo especia (opcional)" name="codigo">
-                                        </div>
-
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                                            <label class="form-check-label" for="gridCheck">
-                                          Check me out
-                                        </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-outline-danger" id="botonRegistro" name="botonRegistro">Registrar</button>
-                                </form>
+								<h1 class="animated bounceInLeft slow-3s ">Crea tu cuenta!</h1>
+								<br>
+                                <div class="panel panel-danger">
+									<div class="panel panel-body">
+										<form id="frmRegistro">
+										<div class="form-row">
+										<div class="form-group col-md-6">
+										<label>Correo</label>
+										<input type="text" class="form-control input-sm" id="correo" name="">
+										</div>
+										<div class="form-group col-md-6">
+										<label>Usuario</label>
+										<input type="text" class="form-control input-sm" id="usuario" name="">
+										</div>
+										</div>
+										<div class="form-row">
+										<div class="form-group col-md-6">
+										<label>Nombre</label>
+										<input type="text" class="form-control input-sm" id="nombre" name="">
+										</div>
+										<div class="form-group col-md-6">
+										<label>Apellidos</label>
+										<input type="text" class="form-control input-sm" id="apellido" name="">
+										</div>
+										</div>	
+										<div class="form-row">
+										<div class="form-group col-md-6">
+										<label>Password</label>
+										<input type="password" class="form-control input-sm" id="password" name="">
+										</div>
+										<div class="form-group col-md-6">
+										<label>Confirma</label>
+										<input type="password" class="form-control input-sm" id="password2" name="" placeholder="Repite el Password">
+										</div>
+										</div>
+										<label>Codigo</label>
+										<input type="text" class="form-control input-sm" id="codigo" name="" placeholder="codigo(opcional)">
+										<p></p>
+										<span class="btn btn-outline-info " id="registrarNuevo" style="float: right; margin-top: 6%">Registrar</span>
+										</form>
+									</div>
+								</div>
                             </div>
                             <div class="col-md-6 d-none d-sm-block ">
                                 <h1 class="animated pulse slow-3s delay-2s ">Registrate!</h1>
@@ -98,48 +91,50 @@
     </div>
 </div>
 </html>
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#botonRegistro').click(function(){
-        if($('#correo').val()==""){
-            alertify.alert("Falta el correo");
-            return false;
-        }else if($('#usuario').val()==""){
-            alertify.alert("Falta el usuario");
-            return false;
-        }else if($('#nombre').val()==""){
-            alertify.alert("Falta el nombre");
-            return false;
-        }else if($('#apellidos').val()==""){
-            alertify.alert("Faltan los apellidos");
-            return false;
-        }else if($('#contraseña1').val()==""){
-            alertify.alert("Falta la contraseña");
-            return false;
-        }
-        cadena="correo=" + $('#correo').val() +
-            "&usuario=" + $('#usuario').val() +
-            "&nombre=" + $('#nombre').val() +
-            "&apellidos=" + $('#apellidos').val() +
-            "&contraseña=" + $('#contraseña1').val() +
-            "&codigo=" + $('#codigo').val();
+<link rel="stylesheet" href="dependencias\bootstrap\bootstrap-4.4.1\dist\css\bootstrap.css">
+<link rel="stylesheet" href="dependencias\js\alertifyjs\css\themes\default.css">
+<link rel="stylesheet" href="dependencias\js\alertifyjs\css\alertify.css">
 
-            $.ajax({
-                type:"POST",
-                url:"php/registro_usuario.php",
-                data:cadena,
-                success:function(r){
-                    if(r==2){
-                        alertify.alert("Usuario o correo ya registrado");
-                    }
-                   else if(r==1){
-                        $('#frmRegistro')[0].reset();
-                        window.location="exito.php";
-                    }else{
-                        alertify.error("fallo al agregar");
-                    }
-                }
-            });
-    });
-});
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#registrarNuevo').click(function(){
+
+			if($('#nombre').val()==""){
+				alertify.alert("Debes agregar el nombre");
+				return false;
+			}else if($('#apellido').val()==""){
+				alertify.alert("Debes agregar el apellido");
+				return false;
+			}else if($('#usuario').val()==""){
+				alertify.alert("Debes agregar el usuario");
+				return false;
+			}else if($('#password').val()==""){
+				alertify.alert("Debes agregar el password");
+				return false;
+			}
+
+			cadena="nombre=" + $('#nombre').val() +
+					"&apellido=" + $('#apellido').val() +
+					"&usuario=" + $('#usuario').val() + 
+					"&password=" + $('#password').val();
+
+					$.ajax({
+						type:"POST",
+						url:"php/registro.php",
+						data:cadena,
+						success:function(r){
+
+							if(r==2){
+								alertify.alert("Este usuario ya existe, prueba con otro :)");
+							}
+							else if(r==1){
+								$('#frmRegistro')[0].reset();
+								alertify.success("Agregado con exito");
+							}else{
+								alertify.error("Fallo al agregar");
+							}
+						}
+					});
+		});
+	});
 </script>

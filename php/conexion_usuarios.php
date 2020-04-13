@@ -1,13 +1,8 @@
-<?php
-#conexion col la base de datos de usuarios registro/registro/busqueda
 
-function conexion(){
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $dbname = "usuarios";
+<?php 
+	function conexion()
+	{
+		return $conexion=mysqli_connect("localhost","root","","pruebas2");
+	}
 
-    return $conexion=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-}
-
-?>
+ ?>
