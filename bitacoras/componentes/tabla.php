@@ -10,7 +10,7 @@
 	<h2>Registro</h2>
 		<table class="table  table-condensed table-bordered">
 		<caption>
-			<button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
+			<button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevo">
 				Agregar nuevo 
 				<span class="glyphicon glyphicon-plus"></span>
 			</button>

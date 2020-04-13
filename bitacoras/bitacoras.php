@@ -21,6 +21,8 @@ if(isset($_SESSION['user'])){
         <script src="librerias/select2/js/select2.js"></script>
         <link rel="stylesheet" href="../estilos/estilo.css">
         <link rel="stylesheet" href="../estilos/animate.css">
+       
+
     </head>
 
     <body class="body_bitacoras">
@@ -32,11 +34,11 @@ if(isset($_SESSION['user'])){
     </div>
   </div>
 </nav>
-        <div class="container bitacoras_container" >
+        <div class="container jumbotron" style="background-color: rgba(15, 15, 15, 0.712);    border-radius: 13px 13px 13px 13px;padding: 3%;" >
             <div id="buscador"></div>
             <div id="tabla"></div>
         </div>
-
+        
         <!-- Modal para registros nuevos -->
 
 
@@ -58,7 +60,7 @@ if(isset($_SESSION['user'])){
                         <input type="text" name="" id="telefono" class="form-control input-sm">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarnuevo">
+                        <button type="button" style="background-color: #ff0153b5;color:white" class="btn " data-dismiss="modal" id="guardarnuevo">
         Agregar
         </button>
 
