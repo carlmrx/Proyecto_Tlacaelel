@@ -9,9 +9,9 @@ if(isset($_SESSION['user'])){
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Tabla dinamica</title>
-        <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">   
-        
-         <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+        <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
         <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
         <link rel="stylesheet" type="text/css" href="librerias/select2/css/select2.css">
         <script src="librerias/jquery-3.2.1.min.js"></script>
@@ -21,24 +21,26 @@ if(isset($_SESSION['user'])){
         <script src="librerias/select2/js/select2.js"></script>
         <link rel="stylesheet" href="../estilos/estilo.css">
         <link rel="stylesheet" href="../estilos/animate.css">
-       
+
 
     </head>
 
     <body class="body_bitacoras">
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
-    <a  style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
-    </div>
-  </div>
-</nav>
-        <div class="container jumbotron" style="background-color: rgba(15, 15, 15, 0.712);    border-radius: 13px 13px 13px 13px;padding: 3%;" >
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
+                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container jumbotron" style="background-color: rgba(15, 15, 15, 0.712);    border-radius: 13px 13px 13px 13px;padding: 3%;">
             <div id="buscador"></div>
             <div id="tabla"></div>
+            <a class="btn " style="float: right;float: right;background-color: aliceblue;color: #322445f7;" href="../bitacoras/php/pdf.php" role="button">Imprimir</a>
+
         </div>
-        
+
         <!-- Modal para registros nuevos -->
 
 
@@ -99,9 +101,10 @@ if(isset($_SESSION['user'])){
 
     </body>
     <div class="navbar-fixed-bottom">
-    <div class="text-center py-2" style="background-color: #fffafa69;">© 2020 Copyright:Carlos Serrano, Pamela Gutierrez
+        <div class="text-center py-2" style="background-color: #fffafa69;">© 2020 Copyright:Carlos Serrano, Pamela Gutierrez
+        </div>
     </div>
-</div>
+
     </html>
 
     <script type="text/javascript">
