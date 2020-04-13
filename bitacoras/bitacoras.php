@@ -27,7 +27,7 @@ if(isset($_SESSION['user'])){
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-    <a class="navbar-brand" style="font-size:x-large;color: black" href="index.html"><b>Bunt</b></a>
+    <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
     <a  style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
     </div>
   </div>
