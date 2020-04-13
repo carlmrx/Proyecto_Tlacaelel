@@ -129,7 +129,7 @@
 							}
 							else if(r==1){
 								$('#frmRegistro')[0].reset();
-								alertify.success("Agregado con exito");
+								window.location="exito.php";
 							}else{
 								alertify.error("Fallo al agregar");
 							}

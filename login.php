@@ -41,20 +41,17 @@
                                     <li class="animated  bounceInDown delay-3s">Mejora el proceso</li>
                                 </ul>
                             </div>
-                            <div class="col-md-6">
-                                <form>
-                                    <div class="form-group">
-                                        <label  style="font-size: x-large;">Correo o Usuario</label>
-                                        <input type="text" class="form-control" id="correo" aria-describedby="emailHelp" name="correo" required>
-                                        <small id="emailHelp" class="form-text text-muted" style="color: snow!important;">Escribe tu correo o usuario</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label style="font-size: x-large;">Contraseña</label>
-                                        <input type="password" class="form-control" id="contraseña" name="contraseña" required >
-                                    </div>
-                                    <a href="#" style="color: orange;">ohh! olvidaste tu contraseña.</a>
-                                    <button type="submit" class="btn btn-outline-light" style="margin-top: 5% ;float: right;" id="entrarSistema" name="entrarSistema">Iniciar</button>
-                                </form>
+                                <div class="col-md-6">
+                                <div class="panel panel-body">
+                                <p></p>
+                                <label style="font-size: xx-large">Usuario</label>
+                                <input type="text" id="usuario" class="form-control input-sm" name="">
+                                <label style="font-size: xx-large">Password</label>
+                                <input type="password" id="password" class="form-control input-sm" name="">
+                                <p></p>
+                                <span class="btn btn-outline-danger" id="entrarSistema" style="float: right;margin-top: 4%">Entrar</span>
+                               
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,30 +69,31 @@
 
 </html>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#entrarSistema').click(function(){
-        if($('#correo').val()==""){
-            alertify.alert("Por favor ingresa el correo ");
-            return false;
-        }else if($('#contraseña').val()=="" ){
-            alertify.alert("Ingresa la contraseña");
-            return false;
-        }
-        cadena="correo=" + $('#correo').val() +
-                "&contraseña=" + $('#contraseña').val();
-              
-                $.ajax({
+	$(document).ready(function(){
+		$('#entrarSistema').click(function(){
+			if($('#usuario').val()==""){
+				alertify.alert("Debes agregar el usuario");
+				return false;
+			}else if($('#password').val()==""){
+				alertify.alert("Debes agregar el password");
+				return false;
+			}
+
+			cadena="usuario=" + $('#usuario').val() + 
+					"&password=" + $('#password').val();
+
+					$.ajax({
 						type:"POST",
 						url:"php/login.php",
 						data:cadena,
 						success:function(r){
 							if(r==1){
-								window.location="exito.php";
+								window.location="bitacoras/bitacoras.php";
 							}else{
-								alertify.alert("Fallo al entrar");
+								alertify.alert("Fallo al entrar :(");
 							}
 						}
 					});
-    });
-});
+		});	
+	});
 </script>

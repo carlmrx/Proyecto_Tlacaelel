@@ -34,6 +34,26 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+.body_bitacoras {
+    background-image: url("../recursos/imagenes/reinhart-julian-79-UsUCtTYA-unsplash.jpg");
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: aliceblue;
+}
+
+.bitacoras_container {
+    border-radius: 13px 13px 13px 13px;
+    -moz-border-radius: 13px 13px 13px 13px;
+    -webkit-border-radius: 13px 13px 13px 13px;
+    border: 0px solid #000000;
+    background-color: rgba(15, 15, 15, 0.712);
+    height: 600px;
+    padding: 3%;
+}
+
 p {
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
