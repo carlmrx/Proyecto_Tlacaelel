@@ -6,6 +6,8 @@ $password="";
 $bd="pruebas";
 $conexion=mysqli_connect($servidor,$usuario,$password,$bd);
 
+
+
 $consulta = "select min(fecha)from t_persona";//fecha inicial
 $result1=mysqli_query($conexion,$consulta);//fecha inicial
 while($mostrar=mysqli_fetch_array($result1)){
@@ -25,8 +27,11 @@ $fecha2 = new DateTime($fecha2);//fecha de cierre
 
 $intervalo = $fecha1->diff($fecha2);
 
-echo $intervalo->format('%Y años %m meses %d days %H horas %i minutos 
-%s segundos');//00 años 0 meses 0 días 08 horas 0 minutos 0 segundos
+echo $intervalo->format(' %H horas %i minutos %s segundos');//00 años 0 meses 0 días 08 horas 0 minutos 0 segundos
+// $tiempo=$intervalo->format(' %H horas %i minutos %s segundos');
+// $consulta = "INSERT INTO `rendimiento`(`tiempo`) VALUES ('$tiempo) ";//inserta el usuario
+// $result1=mysqli_query($conexion,$consulta);
+
 
 
 

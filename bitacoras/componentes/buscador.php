@@ -2,8 +2,8 @@
 	require_once "../php/conexion.php";
 	$conexion=conexion();
 
-	$sql="SELECT id,nombre,apellido,email,telefono 
-						from t_persona";
+	$sql="SELECT id,no_cuenta, nombre, carrera, correo 
+						from mytable";
 				$result=mysqli_query($conexion,$sql);
 
  ?>

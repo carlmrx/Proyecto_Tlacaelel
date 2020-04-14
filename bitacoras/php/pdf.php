@@ -33,6 +33,7 @@ $pdf = new PDF();
 	}
 	
 	$pdf->Output();
+	
 	$sql="TRUNCATE TABLE t_persona";
 	$result=mysqli_query($conexion,$sql);
 

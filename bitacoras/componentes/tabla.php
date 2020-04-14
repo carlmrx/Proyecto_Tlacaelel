@@ -21,7 +21,7 @@
 				<td>Apellido</td>
 				<td>Email</td>
 				<td>Telefono</td>
-				<td>Editar</td>
+				<td>Aceptar</td>
 				<td>Eliminar</td>
 			</tr>
 
@@ -30,8 +30,8 @@
 				if(isset($_SESSION['consulta'])){
 					if($_SESSION['consulta'] > 0){
 						$idp=$_SESSION['consulta'];
-						$sql="SELECT id,nombre,apellido,email,telefono 
-						from t_persona where id='$idp'";
+						$sql="SELECT id,no_cuenta, nombre, carrera, correo
+						from mytable where id='$idp'";
 					}else{
 						$sql="SELECT id,nombre,apellido,email,telefono 
 						from t_persona";
@@ -57,7 +57,7 @@
 				<td><?php echo $ver[3] ?></td>
 				<td><?php echo $ver[4] ?></td>
 				<td>
-					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+					<button class="btn  btn-info glyphicon glyphicon-ok" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
 						
 					</button>
 				</td>

@@ -1,10 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-    
-
 ?>
-
     <!DOCTYPE html>
     <html>
 
@@ -33,6 +30,8 @@ if(isset($_SESSION['user'])){
                 <div class="navbar-header">
                     <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
                     <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
+                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="php/tiempo.php" role="button">tiempo</a>
+
                 </div>
             </div>
         </nav>
@@ -80,7 +79,7 @@ if(isset($_SESSION['user'])){
                 <div class="modal-content" style="background-color: rgba(15, 15, 15, 0.712);">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Actualizar datos</h4>
+                        <h4 class="modal-title" id="myModalLabel">Verificar datos</h4>
                     </div>
                     <div class="modal-body">
                         <input type="text" hidden="" id="idpersona" name="">
@@ -94,7 +93,7 @@ if(isset($_SESSION['user'])){
                         <input type="text" name="" id="telefonou" class="form-control input-sm">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Actualizar</button>
+                        <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Aceptar</button>
 
                     </div>
                 </div>
