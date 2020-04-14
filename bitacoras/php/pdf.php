@@ -28,8 +28,13 @@ $pdf = new PDF();
 		$pdf->Cell(50,6,$row['apellido'],1,0,'C');
 		$pdf->Cell(20,6,$row['telefono'],1,0,'C');
 		$pdf->Cell(70,6,utf8_decode($row['email']),1,1,'C');
+
 		
 	}
+	
 	$pdf->Output();
+	$sql="TRUNCATE TABLE t_persona";
+	$result=mysqli_query($conexion,$sql);
+
 ?>
 ?>
