@@ -14,10 +14,10 @@ $pdf = new PDF();
 	
 	$pdf->SetFillColor(21, 170, 234);
 	$pdf->SetFont('Arial','B',12);
-	$pdf->Cell(40,6,'Nombre',1,0,'C',1);
-	$pdf->Cell(50,6,'Apellido',1,0,'C',1);
-	$pdf->Cell(20,6,'telefono',1,0,'C',1);
-	$pdf->Cell(70,6,'Correo',1,1,'C',1);
+	$pdf->Cell(40,6,'N.cuenta',1,0,'C',1);
+	$pdf->Cell(50,6,'Nombre',1,0,'C',1);
+	$pdf->Cell(70,6,'Correo',1,0,'C',1);
+	$pdf->Cell(20,6,'Carrera',1,1,'C',1);
 	
 	
 	$pdf->SetFont('Arial','',10);
@@ -26,8 +26,8 @@ $pdf = new PDF();
 	{
 		$pdf->Cell(40,6,utf8_decode($row['nombre']),1,0,'C');
 		$pdf->Cell(50,6,$row['apellido'],1,0,'C');
-		$pdf->Cell(20,6,$row['telefono'],1,0,'C');
-		$pdf->Cell(70,6,utf8_decode($row['email']),1,1,'C');
+		$pdf->Cell(70,6,$row['telefono'],1,0,'C');
+		$pdf->Cell(20,6,utf8_decode($row['email']),1,1,'C');
 
 		
 	}

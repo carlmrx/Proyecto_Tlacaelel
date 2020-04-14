@@ -17,10 +17,10 @@
 			<br><br>
 		</caption>
 			<tr>
+				<td>N_cuenta</td>
 				<td>Nombre</td>
-				<td>Apellido</td>
-				<td>Email</td>
-				<td>Telefono</td>
+				<td>Carrera</td>
+				<td>Correo</td>
 				<td>Aceptar</td>
 				<td>Eliminar</td>
 			</tr>
