@@ -32,7 +32,7 @@
              <div class="jumbotron" style="color: #f2efeb;background-color: #0000007d">
                 <h1 class="display-4">Hola,Bienvenido!</h1>
                 <br><br>
-                <p class="lead">Inicia sesion y comienza a disfrutar de los veneficios que te ofresemos ,realiza tus registros mas rapido y efectivo.</p>
+                <p class="lead">Inicia sesion y comienza a disfrutar de los Beneficios que te ofresemos ,realiza tus registros mas rapido y efectivo.</p>
                 <hr class="my-4">
                 <p class="animated zoomIn delay-1s slow-2s">Comienza yaa!</p>
                 <br><br>
