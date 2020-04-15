@@ -63,6 +63,7 @@ referencias de diseño,estrucrura y programacion
 https://www.youtube.com/channel/UCEJD8IkseO_6Cscby8DSU0A
 http://facultad-autodidacta.blogspot.com/
 ------------------------------------------------
-  .
+probado en 	XAMPP Version: 7.4.3
+por si no sabes extrae los archivos y pegalos en C:\xampp\htdocs
   .
   
