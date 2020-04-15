@@ -1,5 +1,6 @@
 # Proyecto_Tlacaelel
 Proyecto de control de bitácoras unitec
+video https://youtu.be/snHstjtlQG0
 este proyecto es ta desarollado para mejorar el servicio y optimizar los procesos de registro de los almnos en una escuela
 ya que este proceso se pierde mucho tiempo en registrar los datos a mano y despues pasandolos a maquina.
 -------------------------------------------------------------------------------------------------------------
