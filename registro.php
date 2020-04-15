@@ -105,6 +105,9 @@
 			}else if($('#apellido').val()==""){
 				alertify.alert("Debes agregar el apellido");
 				return false;
+			}else if($('#correo').val()==""){
+				alertify.alert("Debes agregar el apellido");
+				return false;
 			}else if($('#usuario').val()==""){
 				alertify.alert("Debes agregar el usuario");
 				return false;
@@ -114,6 +117,7 @@
 			}
 
 			cadena="nombre=" + $('#nombre').val() +
+					"&correo=" + $('#correo').val() +
 					"&apellido=" + $('#apellido').val() +
 					"&usuario=" + $('#usuario').val() + 
 					"&password=" + $('#password').val();

@@ -4,6 +4,7 @@
 	$conexion=conexion();
 
 		$nombre=$_POST['nombre'];
+		$correo=$_POST['correo'];
 		$apellido=$_POST['apellido'];
 		$usuario=$_POST['usuario'];
 		$password=sha1($_POST['password']);
@@ -11,8 +12,8 @@
 		if(buscaRepetido($usuario,$password,$conexion)==1){
 			echo 2;
 		}else{
-			$sql="INSERT into usuarios (nombre,apellido,usuario,password)
-				values ('$nombre','$apellido','$usuario','$password')";
+			$sql="INSERT into usuarios (nombre,correo,apellido,usuario,password)
+				values ('$nombre','$correo','$apellido','$usuario','$password')";
 			echo $result=mysqli_query($conexion,$sql);
 		}
 
