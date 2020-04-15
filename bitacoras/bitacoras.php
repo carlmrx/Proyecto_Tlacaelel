@@ -53,13 +53,13 @@ if(isset($_SESSION['user'])){
                         <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
                     </div>
                     <div class="modal-body">
-                        <label>Nombre</label>
+                        <label>N.Cuenta</label>
                         <input type="text" name="" id="nombre" class="form-control input-sm">
-                        <label>Apellido</label>
+                        <label>Nombre</label>
                         <input type="text" name="" id="apellido" class="form-control input-sm">
-                        <label>Email</label>
+                        <label>Carrera</label>
                         <input type="text" name="" id="email" class="form-control input-sm">
-                        <label>telefono</label>
+                        <label>Correo</label>
                         <input type="text" name="" id="telefono" class="form-control input-sm">
                     </div>
                     <div class="modal-footer">
@@ -83,13 +83,13 @@ if(isset($_SESSION['user'])){
                     </div>
                     <div class="modal-body">
                         <input type="text" hidden="" id="idpersona" name="">
-                        <label>Nombre</label>
+                        <label>N.Cuenta</label>
                         <input type="text" name="" id="nombreu" class="form-control input-sm">
-                        <label>Apellido</label>
+                        <label>Nombre</label>
                         <input type="text" name="" id="apellidou" class="form-control input-sm">
-                        <label>Email</label>
+                        <label>Carrera</label>
                         <input type="text" name="" id="emailu" class="form-control input-sm">
-                        <label>telefono</label>
+                        <label>Correo</label>
                         <input type="text" name="" id="telefonou" class="form-control input-sm">
                     </div>
                     <div class="modal-footer">

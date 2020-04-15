@@ -45,9 +45,9 @@
                                 <div class="panel panel-body">
                                 <p></p>
                                 <label style="font-size: xx-large">Usuario</label>
-                                <input type="text" id="usuario" class="form-control input-sm" name="">
+                                <input type="text" pattern="[A-Za-z0-9_-@.]{4,40}" id="usuario" class="form-control input-sm" name="">
                                 <label style="font-size: xx-large">Password</label>
-                                <input type="password" id="password" class="form-control input-sm" name="">
+                                <input type="password" pattern="[A-Za-z0-9_-@.]{4,40}" id="password" class="form-control input-sm" name="">
                                 <p></p>
                                 <span class="btn btn-outline-danger" id="entrarSistema" style="float: right;margin-top: 4%">Entrar</span>
                                
