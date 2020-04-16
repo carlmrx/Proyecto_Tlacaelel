@@ -30,7 +30,7 @@ if(isset($_SESSION['user'])){
                 <div class="navbar-header">
                     <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
                     <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
-                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#bfcf3c" href="php/tiempo.php" role="button">tiempo</a>
+                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#bfcf3c" href="tiempo.php" role="button">tiempo</a>
 
                 </div>
             </div>
@@ -53,7 +53,7 @@ if(isset($_SESSION['user'])){
                         <h4 class="modal-title" style="color: blanchedalmond" id="myModalLabel">Agrega nueva persona</h4>
                     </div>
                     <div class="modal-body" style="color: blanchedalmond">
-                        <input type="hidden" id="personal" value= "<?php echo $_SESSION['user'];?>"  >
+                        
                         <label>N.Cuenta</label>
                         <input type="text" name="" id="nombre"  class="form-control input-sm">
                         <label>Nombre</label>
@@ -82,9 +82,7 @@ if(isset($_SESSION['user'])){
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" style="color: blanchedalmond" id="myModalLabel">Verificar datos</h4>
                     </div>
-                    <div class="modal-body" style="color: blanchedalmond">
-                        <input type="text" id="personal" value= "<?php echo $_SESSION['user'];?>" >
-                        <input type="text" hidden="" id="idpersona" name="">
+                    <div class="modal-body" style="color: blanchedalmond">                   
                         <label>N.Cuenta</label>
                         <input type="text" name="" id="nombreu" class="form-control input-sm">
                         <label>Nombre</label>
@@ -120,12 +118,12 @@ if(isset($_SESSION['user'])){
     <script type="text/javascript">
         $(document).ready(function() {
             $('#guardarnuevo').click(function() {
-                personal = $('#personal').val();
+               
                 nombre = $('#nombre').val();
                 apellido = $('#apellido').val();
                 email = $('#email').val();
                 telefono = $('#telefono').val();
-                agregardatos(nombre, apellido, email, telefono,personal);
+                agregardatos(nombre, apellido, email, telefono);
             });
 
 

@@ -44,6 +44,16 @@
     color: aliceblue;
 }
 
+.body_tiempo {
+    background-image: url("../recursos/imagenes/tiempo.jpg");
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: aliceblue;
+}
+
 p {
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
