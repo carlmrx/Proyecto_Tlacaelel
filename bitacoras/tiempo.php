@@ -47,36 +47,41 @@ $intervalo = $fecha1->diff($fecha2);
     </head>
 
     <body class="body_tiempo">
-    <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" style="font-size:x-large;color: black" href="../index.html"><b>Bunt</b></a>
-                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="../php/salir.php" role="button">salir</a>
-                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#bfcf3c" href="tiempo.php" role="button">tiempo</a>
+                    <a style="margin-top: 7px;font-size: 20px;line-height: 48px;letter-spacing: 0.045em;font-weight: 400;color:#70767b" href="bitacoras.php" role="button">Regresar</a>
 
                 </div>
             </div>
         </nav>
         <div class="container">
             <div class="row">
-                <h1>Rendimiento!</h1>
+                <h1 class="animated infinite bounce delay-1s">Rendimiento!</h1>
                 <br>
-                <div class="col-md-6 text-center">
-                    <h3>Metodo tradicional 🙄  </h3>
+                <div class="col-md-6 text-center animated  bounceInUp delay-1s">
+                    <h3>Metodo tradicional 🙄 </h3>
                     <h5>Normalmente al hacer el registro el personal tarda entre 1 hora a 1 hora y media</h5>
-                    <div class="rectangulo " style="margin-left: auto;margin-right: auto;margin-top: 10%;margin-bottom: 10%;">
+                    <div class="rectangulo animated  zoomIn delay-2s" style="margin-left: auto;margin-right: auto;margin-top: 10%;margin-bottom: 10%;">
                         <h2 style="margin-top: 33px">1 hora</h2>
                     </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <h2>Con Bunt! 😀  </h2>
-                    <h5>Mientras que nuestra forma mejora esto y se toma almenos</h5>
-                    <div class="rectangulo  " style="margin-left: auto;margin-right: auto;margin-top: 10%;margin-bottom: 10%;">
-                        <h2 style="margin-top: 33px"><?php echo $intervalo->format(' %i minutos');?></h2>
-                </div>
-            </div>
+                    <img src="../recursos/imagenes/perdedor.png" class="animated fadeIn	delay-5s" style="width: 40%;" alt="">
 
-        </div>
+                </div>
+                <div class="col-md-6 text-center animated  bounceInUp delay-3s">
+                    <h2>Con Bunt! 😀 </h2>
+                    <h5>Mientras que nuestra plataforma mejoro esto y se tomo exactamente</h5>
+                    <div class="rectangulo animated  zoomIn delay-4s " style="margin-left: auto;margin-right: auto;margin-top: 10%;margin-bottom: 10%;">
+                        <h2 style="margin-top: 33px">
+                            <?php echo $intervalo->format('%i minutos');?>
+                        </h2>
+                    </div>
+                    <img src="../recursos/imagenes/cup.png" class="animated fadeIn delay-5s" style="width: 40%;" alt="">
+                </div>
+                <br>
+                <h3 class="text-center animated fadeIn delay-5s" style="margin-bottom: 5%">Bunt es mucho  mas efectivo !</h3>
+            </div>
 
     </body>
     <div class="navbar-fixed-bottom">
@@ -85,12 +90,12 @@ $intervalo = $fecha1->diff($fecha2);
     </div>
 
     </html>
-<style>
-    .rectangulo {
-     width: 250px; 
-     height: 100px; 
-     border: 3px solid white;
-     background: #cd07ff63;
-     border-radius: 15px;
-}
-</style>
+    <style>
+        .rectangulo {
+            width: 250px;
+            height: 100px;
+            border: 3px solid white;
+            background: #cd07ff63;
+            border-radius: 15px;
+        }
+    </style>
