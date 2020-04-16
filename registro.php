@@ -63,8 +63,8 @@
 										<input type="password" class="form-control input-sm" id="password" name="">
 										</div>
 										<div class="form-group col-md-6">
-										<label>Confirma</label>
-										<input type="password" class="form-control input-sm" id="password2" name="" placeholder="Repite el Password">
+										<label>Confirma tu contraseña</label>
+										<input type="password" class="form-control input-sm" id="password2" name="" >
 										</div>
 										</div>
 										<label>Codigo</label>
@@ -99,7 +99,13 @@
 	$(document).ready(function(){
 		$('#registrarNuevo').click(function(){
 
-			if($('#nombre').val()==""){
+			if($('#correo').val()==""){
+				alertify.alert("Debes agregar un correo");
+				return false;
+			}else if($('#usuario').val()==""){
+				alertify.alert("Debes agregar el usuario");
+				return false;
+			}else if($('#nombre').val()==""){
 				alertify.alert("Debes agregar el nombre");
 				return false;
 			}else if($('#apellido').val()==""){
@@ -108,11 +114,14 @@
 			}else if($('#correo').val()==""){
 				alertify.alert("Debes agregar el apellido");
 				return false;
-			}else if($('#usuario').val()==""){
-				alertify.alert("Debes agregar el usuario");
-				return false;
 			}else if($('#password').val()==""){
 				alertify.alert("Debes agregar el password");
+				return false;
+			}else if($('#password2').val()==""){
+				alertify.alert("Debes confirmar tu contraseña");
+				return false;
+			}else if($('#password').val()!=$('#password2').val()){
+				alertify.alert("Las contraseñas no coinciden");
 				return false;
 			}
 

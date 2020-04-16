@@ -24,7 +24,7 @@ if(isset($_SESSION['user'])){
 
     </head>
 
-    <body class="body_bitacoras">
+    <body class="body_bitacoras" style="color: black">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -35,7 +35,7 @@ if(isset($_SESSION['user'])){
                 </div>
             </div>
         </nav>
-        <div class="container jumbotron" style="background-color: rgba(15, 15, 15, 0.712);    border-radius: 13px 13px 13px 13px;padding: 3%;">
+        <div class="container jumbotron" style="background-color: rgba(15, 15, 15, 0.712);border-radius: 13px 13px 13px 13px;padding: 3%;color:white">
             <div id="buscador"></div>
             <div id="tabla"></div>
             <a class="btn " style="float: right;float: right;background-color: aliceblue;color: #322445f7;" href="../bitacoras/php/pdf.php" role="button">Imprimir</a>
@@ -50,11 +50,12 @@ if(isset($_SESSION['user'])){
                 <div class="modal-content" style="background-color: rgba(15, 15, 15, 0.712);">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
+                        <h4 class="modal-title" style="color: blanchedalmond" id="myModalLabel">Agrega nueva persona</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" style="color: blanchedalmond">
+                        <input type="hidden" id="personal" value= "<?php echo $_SESSION['user'];?>"  >
                         <label>N.Cuenta</label>
-                        <input type="text" name="" id="nombre" class="form-control input-sm">
+                        <input type="text" name="" id="nombre"  class="form-control input-sm">
                         <label>Nombre</label>
                         <input type="text" name="" id="apellido" class="form-control input-sm">
                         <label>Carrera</label>
@@ -79,9 +80,10 @@ if(isset($_SESSION['user'])){
                 <div class="modal-content" style="background-color: rgba(15, 15, 15, 0.712);">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Verificar datos</h4>
+                        <h4 class="modal-title" style="color: blanchedalmond" id="myModalLabel">Verificar datos</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" style="color: blanchedalmond">
+                        <input type="text" id="personal" value= "<?php echo $_SESSION['user'];?>" >
                         <input type="text" hidden="" id="idpersona" name="">
                         <label>N.Cuenta</label>
                         <input type="text" name="" id="nombreu" class="form-control input-sm">
@@ -118,11 +120,12 @@ if(isset($_SESSION['user'])){
     <script type="text/javascript">
         $(document).ready(function() {
             $('#guardarnuevo').click(function() {
+                personal = $('#personal').val();
                 nombre = $('#nombre').val();
                 apellido = $('#apellido').val();
                 email = $('#email').val();
                 telefono = $('#telefono').val();
-                agregardatos(nombre, apellido, email, telefono);
+                agregardatos(nombre, apellido, email, telefono,personal);
             });
 
 
