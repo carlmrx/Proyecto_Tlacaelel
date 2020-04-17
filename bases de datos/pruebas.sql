@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-04-2020 a las 00:46:09
+-- Tiempo de generación: 17-04-2020 a las 09:25:50
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.3
 
@@ -156,16 +156,9 @@ CREATE TABLE `t_persona` (
   `apellido` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `telefono` varchar(50) DEFAULT NULL,
+  `personal` varchar(60) NOT NULL,
   `fecha` time NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `t_persona`
---
-
-INSERT INTO `t_persona` (`id`, `nombre`, `apellido`, `email`, `telefono`, `fecha`) VALUES
-(1, '16672055', 'carlos', 'isc', 'carlos_s.c@gmail.com', '15:27:57'),
-(2, '16594615', 'Angelica Gonzalez', 'I.S.C', 'quam.vel.sapien@odioapurus.edu', '15:29:21');
 
 --
 -- Índices para tablas volcadas
@@ -197,7 +190,7 @@ ALTER TABLE `mytable`
 -- AUTO_INCREMENT de la tabla `t_persona`
 --
 ALTER TABLE `t_persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

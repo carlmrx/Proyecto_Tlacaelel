@@ -78,7 +78,7 @@ $intervalo = $fecha1->diff($fecha2);
                     <img src="../recursos/imagenes/cup.png" class="animated fadeIn delay-5s" style="width: 40%;" alt="">
                 </div>
                 <br>
-                <h3 class="text-center animated fadeIn delay-5s" style="margin-bottom: 5%">Bunt es mucho  mas efectivo !</h3>
+                <h3 class="text-center animated fadeIn delay-5s" style="margin-bottom: 5%">Bunt es mucho MUCHO  mas efectivo !</h3>
             </div>
 
     </body>

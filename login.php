@@ -19,7 +19,7 @@
         <div class="navbar-nav">
 
             <a class="nav-item nav-link" href="registro.php">Registrarse</a>
-            <a class="nav-item nav-link" href="#">Nosotros</a>
+            <a class="nav-item nav-link" href="https://view.genial.ly/5e94dd1edee0d90e2605d0b4/presentation-bitacora-unitec">Nosotros</a>
         </div>
     </div>
 </nav>
