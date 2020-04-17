@@ -1,4 +1,3 @@
-
 <?php 
 	session_start();
 	require_once "../php/conexion.php";
@@ -6,13 +5,14 @@
 	
 ?>
 <div class="row">
-	<div class="col-sm-12">
-	<h2>Registro</h2><table class="table  table-condensed table-bordered">
-		<caption>
-			<br><br>
-		</caption>
-		
-		<?php	$consulta = "select min(fecha)from t_persona";//fecha inicial
+    <div class="col-sm-12">
+        <h2>Registro</h2>
+        <table class="table  table-condensed table-bordered">
+            <caption>
+                <br><br>
+            </caption>
+
+            <?php	$consulta = "select min(fecha)from t_persona";//fecha inicial
 $result1=mysqli_query($conexion,$consulta);//fecha inicial
 while($mostrar=mysqli_fetch_array($result1)){
     $fecha1 = $mostrar['min(fecha)'];
@@ -23,24 +23,24 @@ if($fecha1!=""){
 
 
  ?>
-<table class="table  table-condensed table-bordered">
-		<caption>
-			<button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevo">
+                <table class="table  table-condensed table-bordered">
+                    <caption>
+                        <button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevo">
 				Agregar nuevo 
 				<span class="glyphicon glyphicon-plus"></span>
 			</button>
-			<br><br>
-		</caption>
-			<tr>
-				<td>N_cuenta</td>
-				<td>Nombre</td>
-				<td>Carrera</td>
-				<td>Correo</td>
-				<td>Aceptar</td>
-				<td>Eliminar</td>
-			</tr>
+                        <br><br>
+                    </caption>
+                    <tr>
+                        <td>N_cuenta</td>
+                        <td>Nombre</td>
+                        <td>Carrera</td>
+                        <td>Correo</td>
+                        <td>Aceptar</td>
+                        <td>Eliminar</td>
+                    </tr>
 
-			<?php 
+                    <?php 
 
 				if(isset($_SESSION['consulta'])){
 					if($_SESSION['consulta'] > 0){
@@ -66,40 +66,48 @@ if($fecha1!=""){
 						   $ver[4];
 			 ?>
 
-			<tr>
-				<td><?php echo $ver[1] ?></td>
-				<td><?php echo $ver[2] ?></td>
-				<td><?php echo $ver[3] ?></td>
-				<td><?php echo $ver[4] ?></td>
-				<td>
-					<button class="btn  btn-info glyphicon glyphicon-ok" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+                    <tr>
+                        <td>
+                            <?php echo $ver[1] ?>
+                        </td>
+                        <td>
+                            <?php echo $ver[2] ?>
+                        </td>
+                        <td>
+                            <?php echo $ver[3] ?>
+                        </td>
+                        <td>
+                            <?php echo $ver[4] ?>
+                        </td>
+                        <td>
+                            <button class="btn  btn-info glyphicon glyphicon-ok" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
 						
 					</button>
-				</td>
-				<td>
-					<button class="btn btn-danger glyphicon glyphicon-remove" 
-					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
+                        </td>
+                        <td>
+                            <button class="btn btn-danger glyphicon glyphicon-remove" onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
 						
 					</button>
-				</td>
-			</tr>
-			<?php 
+                        </td>
+                    </tr>
+                    <?php 
 		}
 			 ?>
-		</table>
-	</div>
+                </table>
+    </div>
 </div>
+<a class="btn " style="float: right;float: right;background-color: aliceblue;color: #322445f7;" href="php/pdf.php" role="button">Imprimir</a>
 <?php
 }else{
 	?>
-	<div >
-	<img src="../recursos/imagenes/baseline_post_add_white_48dp.png" style="margin-left: 45%" alt="">
-	<h2 class="text-center">Aun no tienes ningun registro 😢 </h2>
-	<button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevoc">
+    <div>
+        <img src="../recursos/imagenes/baseline_post_add_white_48dp.png" style="margin-left: 45%" alt="">
+        <h2 class="text-center">Aun no tienes ningun registro 😢 </h2>
+        <button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevoc">
 				Crear 
 				<span class="glyphicon glyphicon-plus"></span>
 			</button>
-	</div>
-	<?php
+    </div>
+    <?php
 }
 ?>

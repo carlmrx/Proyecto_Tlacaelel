@@ -40,7 +40,7 @@ if(isset($_SESSION['user'])){
             <div id="tabla"></div>
            
             
-            <a class="btn " style="float: right;float: right;background-color: aliceblue;color: #322445f7;" href="../bitacoras/php/pdf.php" role="button">Imprimir</a>
+           
 
         </div>
          <!-- Modal info de la bitacora -->
