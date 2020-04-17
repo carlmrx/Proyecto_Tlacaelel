@@ -5,8 +5,9 @@ include 'plantilla.php';
 			$password="";
 			$bd="pruebas";
 			$conexion=mysqli_connect($servidor,$usuario,$password,$bd);
+			
 
-$sql="SELECT id,nombre,apellido,email,telefono from t_persona";
+$sql="SELECT id,nombre,apellido,email,telefono from t_persona where id>1";
 $result=mysqli_query($conexion,$sql);
 $pdf = new PDF();
 	$pdf->AliasNbPages();
@@ -18,7 +19,7 @@ $pdf = new PDF();
 	$pdf->Cell(50,6,'Nombre',1,0,'C',1);
 	$pdf->Cell(70,6,'Correo',1,0,'C',1);
 	$pdf->Cell(20,6,'Carrera',1,1,'C',1);
-	
+	echo 
 	
 	$pdf->SetFont('Arial','',10);
 	

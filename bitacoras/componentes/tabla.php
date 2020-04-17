@@ -3,12 +3,27 @@
 	session_start();
 	require_once "../php/conexion.php";
 	$conexion=conexion();
-
- ?>
+	
+?>
 <div class="row">
 	<div class="col-sm-12">
-	<h2>Registro</h2>
-		<table class="table  table-condensed table-bordered">
+	<h2>Registro</h2><table class="table  table-condensed table-bordered">
+		<caption>
+			<br><br>
+		</caption>
+		
+		<?php	$consulta = "select min(fecha)from t_persona";//fecha inicial
+$result1=mysqli_query($conexion,$consulta);//fecha inicial
+while($mostrar=mysqli_fetch_array($result1)){
+    $fecha1 = $mostrar['min(fecha)'];
+   
+}
+if($fecha1!=""){
+
+
+
+ ?>
+<table class="table  table-condensed table-bordered">
 		<caption>
 			<button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevo">
 				Agregar nuevo 
@@ -34,11 +49,11 @@
 						from mytable where id='$idp'";
 					}else{
 						$sql="SELECT id,nombre,apellido,email,telefono 
-						from t_persona";
+						from t_persona where id>1";
 					}
 				}else{
 					$sql="SELECT id,nombre,apellido,email,telefono 
-						from t_persona";
+						from t_persona where id>1";
 				}
 
 				$result=mysqli_query($conexion,$sql);
@@ -74,3 +89,17 @@
 		</table>
 	</div>
 </div>
+<?php
+}else{
+	?>
+	<div >
+	<img src="../recursos/imagenes/baseline_post_add_white_48dp.png" style="margin-left: 45%" alt="">
+	<h2 class="text-center">Aun no tienes ningun registro 😢 </h2>
+	<button class="btn" data-toggle="modal" style="background-color: #6d24e394;color:white" data-target="#modalNuevoc">
+				Crear 
+				<span class="glyphicon glyphicon-plus"></span>
+			</button>
+	</div>
+	<?php
+}
+?>

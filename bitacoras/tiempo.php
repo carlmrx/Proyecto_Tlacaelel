@@ -21,8 +21,6 @@ $fecha2 = new DateTime($fecha2);//fecha de cierre
 
 $intervalo = $fecha1->diff($fecha2);
 
-#echo $intervalo->format(' %H horas %i minutos %s segundos');//00 años 0 meses 0 días 08 horas 0 minutos 0 segundos
-
 ?>
     <!DOCTYPE html>
     <html>
